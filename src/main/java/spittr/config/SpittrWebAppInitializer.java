@@ -26,6 +26,10 @@ public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherS
         return new Filter[0];
     }
 
+    /**
+     * 文件上传配置
+     * @param registration
+     */
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
         registration.setMultipartConfig(new MultipartConfigElement("/tmp/spittr/uploads"));
